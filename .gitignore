@@ -1,0 +1,17 @@
+# Python virtual environments
+.venv/
+.venv-1/
+AI_Model/.venv/
+
+# Raw lunar image dataset
+AI_Model/dataset/raw_images/
+
+# Temporary downloads
+AI_Model/.tmp_downloads/
+
+# Generated PNG dataset tiles
+AI_Model/dataset/processed/tiles/
+
+# Python cache files
+__pycache__/
+*.py[cod]

@@ -1,0 +1,102 @@
+{
+  "generated_at_utc": "2026-11-16T08:21:07Z",
+  "source_image_counts": {
+    "total_source_images": 8,
+    "valid_source_images": 8,
+    "rejected_source_images": 0,
+    "duplicate_images": 0
+  },
+  "tile_counts": {
+    "total_tiles_generated": 2409,
+    "training_tiles": 1725,
+    "validation_tiles": 342,
+    "testing_tiles": 342,
+    "skipped_blank_border_tiles": 0
+  },
+  "split_assignments": {
+    "train": [
+      "M181302109LC_pyr.tif",
+      "M183660970LC_pyr (1).tif",
+      "lunar_image_007.tif",
+      "lunar_image_008.tif",
+      "M1443455067LC_pyr.tif",
+      "lunar_image_006.tif"
+    ],
+    "val": [
+      "M1139037292LC_pyr.tif"
+    ],
+    "test": [
+      "M1402392275LC_pyr.tif"
+    ]
+  },
+  "evaluation_limitation_note": "Dataset contains only 8 source LROC strips (6 train / 1 val / 1 test). While source-level splitting prevents spatial leakage, 1 validation and 1 test strip provide limited geographic diversity for statistically broad generalization metrics.",
+  "original_image_dimensions": [
+    {
+      "filename": "M1139037292LC_pyr.tif",
+      "width": 5064,
+      "height": 52224,
+      "split": "val",
+      "sha256_hash": "def1f536822ee6a09623ef1e91acf877936b86f652f52a19d1a6ceddc193d613"
+    },
+    {
+      "filename": "M1402392275LC_pyr.tif",
+      "width": 5064,
+      "height": 52224,
+      "split": "test",
+      "sha256_hash": "ba8fd23bb404fefada53b77ff6d87f7b0c07d85d9f48f786a772dea377514516"
+    },
+    {
+      "filename": "M1443455067LC_pyr.tif",
+      "width": 5064,
+      "height": 28672,
+      "split": "train",
+      "sha256_hash": "8987b38bfe5a23b09429f2ca1185a1b77a586fbf59126aac7e0fb00f89dff65e"
+    },
+    {
+      "filename": "M181302109LC_pyr.tif",
+      "width": 5064,
+      "height": 52224,
+      "split": "train",
+      "sha256_hash": "8e01d181a6af6f21989a9e2e5b5a9a4436e1980bb96e590236a56d782ced18d2"
+    },
+    {
+      "filename": "M183660970LC_pyr (1).tif",
+      "width": 5064,
+      "height": 52224,
+      "split": "train",
+      "sha256_hash": "807c42d788a8d379e5ff3c074afbeee9535b11b542b0a78ac3e43cb4c1d6fb64"
+    },
+    {
+      "filename": "lunar_image_006.tif",
+      "width": 5064,
+      "height": 52224,
+      "split": "train",
+      "sha256_hash": "bec2732b18f9e942e7a710541cb4908febc39d9b4c1d23c1400554d95a9a6e54"
+    },
+    {
+      "filename": "lunar_image_007.tif",
+      "width": 2532,
+      "height": 52224,
+      "split": "train",
+      "sha256_hash": "114a7c76689402409d222dd7a84f28e2520840d4ebb8a88685a8449cbfd78cf6"
+    },
+    {
+      "filename": "lunar_image_008.tif",
+      "width": 5064,
+      "height": 52224,
+      "split": "train",
+      "sha256_hash": "aaccfa6bb81718a71e8101726fb9edddb4649b4ed0f7919f982d62bebe59b452"
+    }
+  ],
+  "processing_errors": [],
+  "processing_configuration": {
+    "tile_width": 1024,
+    "tile_height": 1024,
+    "overlap_percentage": 10.0,
+    "snap_edge_tiles": true,
+    "output_format": "png",
+    "random_seed": 42,
+    "use_memmap": true,
+    "normalize_16bit_to_8bit": true
+  }
+}

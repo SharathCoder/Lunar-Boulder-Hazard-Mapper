@@ -1,0 +1,9 @@
+source_filename,relative_path,validation_status,rejection_reason,image_format,width,height,channels,dtype,file_size_bytes,sha256_hash,stage2_hash_match,checked_at_utc
+lunar_image_006.tif,dataset/raw_images/lunar_image_006.tif,VALID,,TIFF,5064,52224,1,uint8,47087015,bec2732b18f9e942e7a710541cb4908febc39d9b4c1d23c1400554d95a9a6e54,MATCH,2026-11-16T08:18:26Z
+lunar_image_007.tif,dataset/raw_images/lunar_image_007.tif,VALID,,TIFF,2532,52224,1,uint8,25653799,114a7c76689402409d222dd7a84f28e2520840d4ebb8a88685a8449cbfd78cf6,MATCH,2026-11-16T08:18:26Z
+lunar_image_008.tif,dataset/raw_images/lunar_image_008.tif,VALID,,TIFF,5064,52224,1,uint8,32207313,aaccfa6bb81718a71e8101726fb9edddb4649b4ed0f7919f982d62bebe59b452,MATCH,2026-11-16T08:18:26Z
+M1139037292LC_pyr.tif,dataset/raw_images/M1139037292LC_pyr.tif,VALID,,TIFF,5064,52224,1,uint8,35066473,def1f536822ee6a09623ef1e91acf877936b86f652f52a19d1a6ceddc193d613,MATCH,2026-11-16T08:18:26Z
+M1402392275LC_pyr.tif,dataset/raw_images/M1402392275LC_pyr.tif,VALID,,TIFF,5064,52224,1,uint8,26888795,ba8fd23bb404fefada53b77ff6d87f7b0c07d85d9f48f786a772dea377514516,MATCH,2026-11-16T08:18:26Z
+M1443455067LC_pyr.tif,dataset/raw_images/M1443455067LC_pyr.tif,VALID,,TIFF,5064,28672,1,uint8,16310431,8987b38bfe5a23b09429f2ca1185a1b77a586fbf59126aac7e0fb00f89dff65e,MATCH,2026-11-16T08:18:26Z
+M181302109LC_pyr.tif,dataset/raw_images/M181302109LC_pyr.tif,VALID,,TIFF,5064,52224,1,uint8,33101385,8e01d181a6af6f21989a9e2e5b5a9a4436e1980bb96e590236a56d782ced18d2,MATCH,2026-11-16T08:18:26Z
+M183660970LC_pyr (1).tif,dataset/raw_images/M183660970LC_pyr (1).tif,VALID,,TIFF,5064,52224,1,uint8,26982375,807c42d788a8d379e5ff3c074afbeee9535b11b542b0a78ac3e43cb4c1d6fb64,MATCH,2026-11-16T08:18:26Z

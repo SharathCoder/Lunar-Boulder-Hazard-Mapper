@@ -1,0 +1,24 @@
+collection:
+  max_images: 3
+  source_manifest: "config/source_urls.csv"
+  output_dir: "dataset/raw_images"
+  metadata_csv: "dataset/image_metadata.csv"
+  filename_prefix: "lunar_image"
+  overwrite_existing: false
+
+network:
+  timeout_seconds: 30
+  chunk_size_bytes: 8192
+  max_retries: 3
+  user_agent: "LunarBoulderHazardMapper-ResearchClient/1.0"
+
+validation:
+  min_width: 256
+  min_height: 256
+  supported_formats:
+    - "jpg"
+    - "jpeg"
+    - "png"
+    - "tif"
+    - "tiff"
+  enable_duplicate_detection: true

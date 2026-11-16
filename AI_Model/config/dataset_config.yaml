@@ -1,0 +1,56 @@
+# Stage 3: Lunar Image Dataset Validation & Memory-Efficient Tiling Configuration
+# All paths are relative to the AI_Model/ directory.
+
+paths:
+  raw_images_dir: "dataset/raw_images"
+  image_metadata_csv: "dataset/image_metadata.csv"
+  processed_dir: "dataset/processed"
+  tiles_dir: "dataset/processed/tiles"
+  reports_dir: "dataset/processed/reports"
+  validation_report_csv: "dataset/processed/reports/validation_report.csv"
+  dataset_summary_json: "dataset/processed/reports/dataset_summary.json"
+  dataset_manifest_csv: "dataset/dataset_manifest.csv"
+
+validation:
+  supported_formats:
+    - "tif"
+    - "tiff"
+    - "png"
+    - "jpg"
+    - "jpeg"
+  min_width: 512
+  min_height: 512
+  enable_duplicate_detection: true
+  verify_against_stage2_hashes: true
+
+splitting:
+  # Split at the SOURCE IMAGE level before tiling to prevent spatial data leakage.
+  # For 8 source images, exact counts (6 train / 1 val / 1 test) ensure every split
+  # has at least 1 complete strip. Switch to ratios when scaling to larger datasets.
+  mode: "counts"              # Options: "counts" or "ratios"
+  train_count: 6
+  val_count: 1
+  test_count: 1
+  train_ratio: 0.75
+  val_ratio: 0.125
+  test_ratio: 0.125
+  random_seed: 42
+
+tiling:
+  tile_width: 1024
+  tile_height: 1024
+  overlap_percentage: 10.0
+  # When true, final right/bottom edge tiles snap inward so all tiles keep uniform
+  # 1024x1024 dimensions (with higher overlap on the border) rather than thin slivers.
+  snap_edge_tiles: true
+  output_format: "png"        # Lossless "png" (recommended for Roboflow) or "jpg"
+  jpeg_quality: 95
+  # Skip completely empty/black border padding tiles (e.g., all-zero nodata margins)
+  skip_blank_tiles: true
+  min_non_zero_fraction: 0.05
+
+memory:
+  use_memmap: true
+  # Convert 16-bit scientific TIFF pixels to 8-bit PNG/JPG tiles for YOLO/Roboflow
+  # using robust 1st-99th percentile contrast stretch (originals remain untouched).
+  normalize_16bit_to_8bit: true
